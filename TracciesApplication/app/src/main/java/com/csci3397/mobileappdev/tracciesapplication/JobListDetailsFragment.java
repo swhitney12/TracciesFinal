@@ -75,13 +75,21 @@ public class JobListDetailsFragment extends Fragment {
         jobDescTextView = view.findViewById(R.id.jobListDetailsDesc);
 
         applyButton = view.findViewById(R.id.jobListDetailsApplyBtn);
+//        R.string.job_link = "https://www.youtube.com";
 
         Bundle bundle = this.getArguments();
         jobTitleTextView.setText(bundle.getString("job_Title"));
         companyNameTextView.setText(bundle.getString("company_Name"));
         jobLocationTextView.setText(bundle.getString("job_Location"));
-        bundle.getString("job_ApplyLink");
+        String jobLink = bundle.getString("job_ApplyLink");
         jobDescTextView.setText(bundle.getString("job_Description"));
+
+        applyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println(jobLink);
+            }
+        });
 
         return view;
     }
