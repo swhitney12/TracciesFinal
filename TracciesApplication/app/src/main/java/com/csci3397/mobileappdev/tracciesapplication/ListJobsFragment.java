@@ -129,21 +129,8 @@ public class ListJobsFragment extends Fragment {
                 bundle.putString("job_ApplyLink", jobres.getString(3));
                 bundle.putString("job_Description", jobres.getString(4));
 
-
-//                Job selectedItem = jobList.get(position);
-
-//                Fragment fragment = new JobDetailsFragment();
-//                Bundle bundle = new Bundle();
-//
-//                bundle.putString("job_Title", selectedItem.getJobTitle());
-//                bundle.putString("apply_Link", selectedItem.getUrl());
-//                bundle.putString("logo_Image", selectedItem.getCompanyLogo());
-//                bundle.putString("company_Name", selectedItem.getCompanyTitle());
-//                bundle.putString("job_Location", selectedItem.getLocation());
-//                bundle.putString("job_Description", selectedItem.getJobDescription());
-//
                 fragment.setArguments(bundle);
-//
+
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragmentnav, fragment);

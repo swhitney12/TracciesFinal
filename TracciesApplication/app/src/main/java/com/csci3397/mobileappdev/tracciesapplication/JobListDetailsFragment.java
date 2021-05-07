@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -26,7 +27,9 @@ public class JobListDetailsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    TextView jobTitleTextView;
+    TextView jobTitleTextView, companyNameTextView, jobLocationTextView, jobDescTextView;
+    Button applyButton;
+
 
 
     public JobListDetailsFragment() {
@@ -63,11 +66,22 @@ public class JobListDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_job_list_details, container, false);
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_job_list_details, container, false);
+
+        jobTitleTextView = view.findViewById(R.id.jobListDetailsTitle);
+        companyNameTextView = view.findViewById(R.id.jobListDetailsCompanyName);
+        jobLocationTextView = view.findViewById(R.id.jobListDetailsLocation);
+        jobDescTextView = view.findViewById(R.id.jobListDetailsDesc);
+
+        applyButton = view.findViewById(R.id.jobListDetailsApplyBtn);
 
         Bundle bundle = this.getArguments();
+        jobTitleTextView.setText(bundle.getString("job_Title"));
+        companyNameTextView.setText(bundle.getString("company_Name"));
+        jobLocationTextView.setText(bundle.getString("job_Location"));
+        bundle.getString("job_ApplyLink");
+        jobDescTextView.setText(bundle.getString("job_Description"));
 
         return view;
     }

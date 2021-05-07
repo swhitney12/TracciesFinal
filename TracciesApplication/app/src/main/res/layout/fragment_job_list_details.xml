@@ -30,7 +30,7 @@
             android:fontFamily="@font/rajdhani_semibold"
             android:text="Job Title"
             android:textColor="@color/white"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="35dp"
             />
@@ -57,7 +57,7 @@
             android:textColor="@color/black"
             android:text="Company Name" />
         <TextView
-            android:id="@+id/jobDetailsLocation"
+            android:id="@+id/jobListDetailsLocation"
             android:layout_toRightOf="@+id/jobListDetailsLogo"
             android:layout_below="@id/jobListDetailsCompanyName"
             android:layout_width="wrap_content"

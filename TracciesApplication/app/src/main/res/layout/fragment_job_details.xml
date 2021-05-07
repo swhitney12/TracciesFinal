@@ -30,7 +30,7 @@
             android:fontFamily="@font/rajdhani_semibold"
             android:text="Job Title"
             android:textColor="@color/white"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="35dp"
             />
