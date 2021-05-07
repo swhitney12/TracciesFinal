@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/listListsFragment">
+    <fragment
+        android:id="@+id/jobSearchFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.JobSearchFragment"
+        android:label="fragment_job_search"
+        tools:layout="@layout/fragment_job_search" >
+        <action
+            android:id="@+id/action_jobSearchFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/companySearchFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.CompanySearchFragment"
+        android:label="fragment_company_search"
+        tools:layout="@layout/fragment_company_search" />
+    <fragment
+        android:id="@+id/listListsFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.ListListsFragment"
+        android:label="fragment_list_lists"
+        tools:layout="@layout/fragment_list_lists" >
+        <action
+            android:id="@+id/action_listListsFragment_to_configureListFragment"
+            app:destination="@id/configureListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/configureListFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.ConfigureListFragment"
+        android:label="fragment_configure_list"
+        tools:layout="@layout/fragment_configure_list" />
+    <fragment
+        android:id="@+id/listJobsFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.ListJobsFragment"
+        android:label="fragment_list_jobs"
+        tools:layout="@layout/fragment_list_jobs" />
+    <fragment
+        android:id="@+id/jobDetailsFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.JobDetailsFragment"
+        android:label="fragment_job_details"
+        tools:layout="@layout/fragment_job_details" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.csci3397.mobileappdev.tracciesapplication.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
+</navigation>

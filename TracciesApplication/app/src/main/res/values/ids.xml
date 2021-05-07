@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="MyLists" type="id" />
+    <item name="CompanySearch" type="id" />
+    <item name="JobSearch" type="id" />
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/background_light"
+
+    tools:context=".JobDetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp">
+        <ImageView
+            android:id="@+id/jobDetailsBacksplash"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backsplash" />
+
+        <TextView
+            android:id="@+id/jobDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rajdhani_semibold"
+            android:text="Job Title"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            />
+
+        <ImageView
+            android:id="@+id/jobDetailsLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/jobDetailsBacksplash"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_margin="25dp"
+            />
+
+        <TextView
+            android:id="@+id/jobDetailsCompanyName"
+            android:layout_toRightOf="@+id/jobDetailsLogo"
+            android:layout_below="@id/jobDetailsBacksplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="-5dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:text="Company Name" />
+        <TextView
+            android:id="@+id/jobDetailsLocation"
+            android:layout_toRightOf="@+id/jobDetailsLogo"
+            android:layout_below="@id/jobDetailsCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="-5dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:text="Location" />
+
+        <Button
+            android:id="@+id/jobDetailsApplyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jobDetailsLogo"
+            android:background="@drawable/purplefilledbtn"
+            android:layout_marginLeft="25dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Apply"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/jobDetailsSaveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jobDetailsLogo"
+            android:background="@drawable/purplebordertransparentbtn"
+            android:layout_toRightOf="@+id/jobDetailsApplyBtn"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="Save to List"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/jobDetailsDescTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jobDetailsApplyBtn"
+            android:text="Job Description"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:textSize="24dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/jobDetailsDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jobDetailsDescTitle"
+            android:layout_marginLeft="25dp"
+            android:text="Job Description Text Here"
+            android:fontFamily="@font/poppins"
+            android:textSize="13dp"
+            android:textColor="@color/black"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/jobDetailsCompStatsBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="100dp"-->
+<!--            android:background="@drawable/purplefilledbtn"-->
+<!--            android:paddingLeft="50dp"-->
+<!--            android:paddingRight="50dp"-->
+<!--            android:text="See Company Stats"-->
+<!--            />-->
+
+
+    </RelativeLayout>
+
+</ScrollView>

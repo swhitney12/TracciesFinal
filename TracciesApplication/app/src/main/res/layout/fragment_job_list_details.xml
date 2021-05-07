@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/background_light"
+
+    tools:context=".JobDetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp">
+        <ImageView
+            android:id="@+id/jobListDetailsBacksplash"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backsplash" />
+
+        <TextView
+            android:id="@+id/jobListDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rajdhani_semibold"
+            android:text="Job Title"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            />
+
+        <ImageView
+            android:id="@+id/jobListDetailsLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/jobListDetailsBacksplash"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_margin="25dp"
+            />
+
+        <TextView
+            android:id="@+id/jobListDetailsCompanyName"
+            android:layout_toRightOf="@+id/jobListDetailsLogo"
+            android:layout_below="@+id/jobListDetailsBacksplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="-5dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:text="Company Name" />
+        <TextView
+            android:id="@+id/jobDetailsLocation"
+            android:layout_toRightOf="@+id/jobListDetailsLogo"
+            android:layout_below="@id/jobListDetailsCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="-5dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:text="Location" />
+
+        <Button
+            android:id="@+id/jobListDetailsApplyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jobListDetailsLogo"
+            android:background="@drawable/purplefilledbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:paddingLeft="125dp"
+            android:paddingRight="125dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Apply"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/jobListDetailsDescTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jobListDetailsApplyBtn"
+            android:text="Job Description"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:textSize="24dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/jobListDetailsDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jobListDetailsDescTitle"
+            android:layout_marginLeft="25dp"
+            android:text="Job Description Text Here"
+            android:fontFamily="@font/poppins"
+            android:textSize="13dp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+</ScrollView>
