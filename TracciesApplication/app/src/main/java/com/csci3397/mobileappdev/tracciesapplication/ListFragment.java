@@ -86,7 +86,7 @@ public class ListFragment extends Fragment {
         preferences = getActivity().getSharedPreferences("Preferences", 0);
         String username = preferences.getString("username", null);
 
-        Cursor res = db.getListNames();
+        Cursor res = db.getListNames(username);
         while (res.moveToNext()){
             listnames.add(res.getString(0));
             System.out.println("List list: " + res.getString(0));

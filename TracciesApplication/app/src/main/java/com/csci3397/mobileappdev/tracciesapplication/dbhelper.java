@@ -76,11 +76,11 @@ public class dbhelper extends SQLiteOpenHelper {
     }
 
 
-    public Cursor getListListsName(String username) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select ListName from JobList where JobList.username =" + username , null);
-        return cursor;
-    }
+//    public Cursor getListListsName(String username) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        Cursor cursor = db.rawQuery("Select ListName from JobList WHERE TRIM(JobList.username)= '"+username+"'", null);
+//        return cursor;
+//    }
 
     public Cursor getJobListID(String username, String ListName) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -111,9 +111,9 @@ public class dbhelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor getListNames() {
+    public Cursor getListNames(String username) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select ListName from JobList", null);
+        Cursor cursor = db.rawQuery("Select ListName from JobList WHERE TRIM(JobList.username)= '"+username+"'", null);
         return cursor;
     }
 

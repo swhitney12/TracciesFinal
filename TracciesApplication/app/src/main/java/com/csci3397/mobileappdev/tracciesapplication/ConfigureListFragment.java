@@ -109,7 +109,7 @@ public class ConfigureListFragment extends Fragment {
                     fragmentTransaction.replace(R.id.fragmentnav, fragment);
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
-                    Cursor res = db.getListNames();
+                    Cursor res = db.getListNames(username);
                     while (res.moveToNext()){
                         System.out.println("Configure List: " + res.getString(0));
                     }

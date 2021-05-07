@@ -112,7 +112,7 @@ public class JobDetailsFragment extends Fragment {
         preferences = getActivity().getSharedPreferences("Preferences", 0);
         username = preferences.getString("username", null);
 
-        Cursor res = db.getListNames();
+        Cursor res = db.getListNames(username);
         while (res.moveToNext()){
             listnames.add(res.getString(0));
         }
