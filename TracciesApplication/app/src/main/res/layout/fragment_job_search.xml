@@ -18,16 +18,17 @@
         android:scaleType="fitXY"
         android:src="@drawable/backsplash" />
 
-    <SearchView
-        android:id="@+id/jobSearchView"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/jobSearchTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/searchbg"
-        android:padding="10dp"
-        android:layout_margin="10dp"/>
+        android:fontFamily="@font/rajdhani_semibold"
+        android:text="Jobs For You"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        />
 
     <ListView
         android:id="@+id/jobListView"

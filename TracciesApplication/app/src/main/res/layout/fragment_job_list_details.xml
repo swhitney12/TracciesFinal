@@ -69,26 +69,22 @@
             android:textColor="@color/black"
             android:text="Location" />
 
-        <Button
-            android:id="@+id/jobListDetailsApplyBtn"
+        <TextView
+            android:id="@+id/jobListDetailsApplyPrompt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/jobListDetailsLogo"
-            android:background="@drawable/purplefilledbtn"
-            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
             android:layout_marginLeft="25dp"
-            android:paddingLeft="125dp"
-            android:paddingRight="125dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="Apply"
-            android:textSize="18dp"/>
+            android:layout_below="@+id/jobListDetailsLogo"
+            android:text="Apply Here: "
+            android:autoLink="all"
+            />
 
         <TextView
             android:id="@+id/jobListDetailsDescTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/jobListDetailsApplyBtn"
+            android:layout_below="@+id/jobListDetailsApplyPrompt"
             android:text="Job Description"
             android:textColor="@color/black"
             android:fontFamily="@font/poppins"

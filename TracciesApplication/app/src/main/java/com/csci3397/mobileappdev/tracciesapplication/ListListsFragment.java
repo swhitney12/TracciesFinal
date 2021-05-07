@@ -91,7 +91,6 @@ public class ListListsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        System.out.println("on create view");
         root =inflater.inflate(R.layout.fragment_list_lists, container, false);
 
         db = new dbhelper(getContext());
@@ -128,7 +127,6 @@ public class ListListsFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = (String) parent.getItemAtPosition(position);
 
-                System.out.println(selectedItem);
                 Fragment fragment = new ListJobsFragment();
                 Bundle bundle = new Bundle();
 

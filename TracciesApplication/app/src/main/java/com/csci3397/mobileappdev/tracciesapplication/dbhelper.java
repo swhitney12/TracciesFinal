@@ -75,13 +75,6 @@ public class dbhelper extends SQLiteOpenHelper {
 
     }
 
-
-//    public Cursor getListListsName(String username) {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        Cursor cursor = db.rawQuery("Select ListName from JobList WHERE TRIM(JobList.username)= '"+username+"'", null);
-//        return cursor;
-//    }
-
     public Cursor getJobListID(String username, String ListName) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT ListID FROM JobList WHERE TRIM(JobList.username) = '"+username.trim()+"' and TRIM(JobList.ListName)= '"+ListName.trim()+"'", null);

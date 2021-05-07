@@ -102,7 +102,6 @@ public class ListJobsFragment extends Fragment {
         Cursor joblistres = db.getJobListData(listIdRes.getString(0));
 
         while(joblistres.moveToNext()) {
-            System.out.println(joblistres.getString(0));
             fillJobTitle.add(joblistres.getString(0));
             fillCompanyName.add(joblistres.getString(1));
             fillLocations.add(joblistres.getString(2));

@@ -77,7 +77,6 @@ public class ListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        System.out.println("on create view");
         View root =inflater.inflate(R.layout.fragment_list_lists, container, false);
 
         db = new dbhelper(getContext());
@@ -89,9 +88,7 @@ public class ListFragment extends Fragment {
         Cursor res = db.getListNames(username);
         while (res.moveToNext()){
             listnames.add(res.getString(0));
-            System.out.println("List list: " + res.getString(0));
         }
-        System.out.println(listnames.size());
 
         final ArrayAdapter<String> adapter = new ArrayAdapter<String> (getActivity(), android.R.layout.simple_list_item_1, listnames);
         listListView.setAdapter(adapter);
@@ -115,7 +112,6 @@ public class ListFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = (String) parent.getItemAtPosition(position);
 
-                System.out.println(selectedItem);
                 Fragment fragment = new ListJobsFragment();
                 Bundle bundle = new Bundle();
 

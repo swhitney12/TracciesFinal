@@ -34,12 +34,6 @@ public class ApplicationMain extends AppCompatActivity {
 
         preferences = getApplicationContext().getSharedPreferences("Preferences", 0);
 
-        Map<String, ?> allEntries = preferences.getAll();
-        for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
-            Log.d("map values", entry.getKey() + ": " + entry.getValue().toString());
-        }
-
-
         bottomNavigationView = findViewById(R.id.bottomnav);
         navController = Navigation.findNavController(this, R.id.fragmentnav);
         bottomNavigationView.setItemIconTintList(null);

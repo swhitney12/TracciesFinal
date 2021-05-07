@@ -128,6 +128,7 @@ public class JobSearchFragment extends Fragment {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 //on internet error, show dialog
+                alertUserError();
                 e.printStackTrace();
             }
 
@@ -232,6 +233,10 @@ public class JobSearchFragment extends Fragment {
         return view;
     }
 
+    private void alertUserError() {
+        AlertDialogueFragment dialog = new AlertDialogueFragment();
+        dialog.show(getActivity().getSupportFragmentManager(), "error_dialog");
+    }
 
     public ArrayList<Job> sortJobsByLocations(ArrayList<Job> list, final double myLatitude, final double myLongitude) {
         Comparator comp = new Comparator<Job>() {

@@ -42,7 +42,7 @@ public class JobDetailsFragment extends Fragment {
     private String mParam2;
     Dialog saveToListDialog;
     Button showSaveListDialog;
-    TextView jobTitle, companyName, jobLocation, jobDescription;
+    TextView jobTitle, companyName, jobLocation, jobDescription, applyPromptTextView;
     ImageView companyLogo;
     dbhelper db;
     SharedPreferences preferences;
@@ -96,6 +96,7 @@ public class JobDetailsFragment extends Fragment {
         companyName = view.findViewById(R.id.jobDetailsCompanyName);
         jobLocation = view.findViewById(R.id.jobDetailsLocation);
         jobDescription = view.findViewById(R.id.jobDetailsDesc);
+        applyPromptTextView = view.findViewById(R.id.jobDetailsApplyPrompt);
 
         Bundle bundle = this.getArguments();
 
@@ -105,6 +106,7 @@ public class JobDetailsFragment extends Fragment {
         companyName.setText(bundle.getString("company_Name"));
         jobLocation.setText(bundle.getString("job_Location"));
         jobDescription.setText(bundle.getString("job_Description"));
+        applyPromptTextView.setText(applyPromptTextView.getText() + jobLink);
 
 
         db = new dbhelper(getContext());

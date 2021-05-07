@@ -107,7 +107,6 @@ public class CompanySearchFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = (String) parent.getItemAtPosition(position);
-                //System.out.println(selectedItem);
 
                 Fragment fragment = new CompanyPageFragment();
                 Bundle bundle = new Bundle();

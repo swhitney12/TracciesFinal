@@ -110,9 +110,6 @@ public class ConfigureListFragment extends Fragment {
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
                     Cursor res = db.getListNames(username);
-                    while (res.moveToNext()){
-                        System.out.println("Configure List: " + res.getString(0));
-                    }
                 } else {
                     Toast.makeText(getContext(), "List Creation Failed", Toast.LENGTH_SHORT).show();
                 }

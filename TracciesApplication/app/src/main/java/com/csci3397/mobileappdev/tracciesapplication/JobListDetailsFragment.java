@@ -1,5 +1,7 @@
 package com.csci3397.mobileappdev.tracciesapplication;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -27,8 +29,7 @@ public class JobListDetailsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    TextView jobTitleTextView, companyNameTextView, jobLocationTextView, jobDescTextView;
-    Button applyButton;
+    TextView jobTitleTextView, companyNameTextView, jobLocationTextView, jobDescTextView, applyLinkTextView;
 
 
 
@@ -73,9 +74,8 @@ public class JobListDetailsFragment extends Fragment {
         companyNameTextView = view.findViewById(R.id.jobListDetailsCompanyName);
         jobLocationTextView = view.findViewById(R.id.jobListDetailsLocation);
         jobDescTextView = view.findViewById(R.id.jobListDetailsDesc);
+        applyLinkTextView = view.findViewById(R.id.jobListDetailsApplyPrompt);
 
-        applyButton = view.findViewById(R.id.jobListDetailsApplyBtn);
-//        R.string.job_link = "https://www.youtube.com";
 
         Bundle bundle = this.getArguments();
         jobTitleTextView.setText(bundle.getString("job_Title"));
@@ -83,13 +83,7 @@ public class JobListDetailsFragment extends Fragment {
         jobLocationTextView.setText(bundle.getString("job_Location"));
         String jobLink = bundle.getString("job_ApplyLink");
         jobDescTextView.setText(bundle.getString("job_Description"));
-
-        applyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println(jobLink);
-            }
-        });
+        applyLinkTextView.setText(applyLinkTextView.getText() + jobLink);
 
         return view;
     }

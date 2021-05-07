@@ -69,28 +69,39 @@
             android:textColor="@color/black"
             android:text="Location" />
 
-        <Button
-            android:id="@+id/jobDetailsApplyBtn"
+        <TextView
+            android:id="@+id/jobDetailsApplyPrompt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/jobDetailsLogo"
-            android:background="@drawable/purplefilledbtn"
+            android:textSize="20dp"
             android:layout_marginLeft="25dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:text="Apply"
-            android:textSize="18dp"/>
+            android:layout_below="@+id/jobDetailsLogo"
+            android:text="Apply Here: "
+            android:autoLink="all"
+            />
+
+<!--        <Button-->
+<!--            android:id="@+id/jobDetailsApplyBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/jobDetailsLogo"-->
+<!--            android:background="@drawable/purplefilledbtn"-->
+<!--            android:layout_marginLeft="25dp"-->
+<!--            android:paddingLeft="50dp"-->
+<!--            android:paddingRight="50dp"-->
+<!--            android:text="Apply"-->
+<!--            android:textSize="18dp"/>-->
 
         <Button
             android:id="@+id/jobDetailsSaveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/jobDetailsLogo"
+            android:layout_below="@+id/jobDetailsApplyPrompt"
             android:background="@drawable/purplebordertransparentbtn"
-            android:layout_toRightOf="@+id/jobDetailsApplyBtn"
-            android:layout_marginLeft="20dp"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:layout_marginTop="15dp"
             android:text="Save to List"
             android:textSize="18dp"/>
 
@@ -98,7 +109,7 @@
             android:id="@+id/jobDetailsDescTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/jobDetailsApplyBtn"
+            android:layout_below="@id/jobDetailsSaveBtn"
             android:text="Job Description"
             android:textColor="@color/black"
             android:fontFamily="@font/poppins"
