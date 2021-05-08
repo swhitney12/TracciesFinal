@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +11,6 @@
         android:layout_width="fill_parent"
         android:layout_height="330dp"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/layeredgradientblob" />
 
     <TextView
@@ -23,10 +20,10 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="Sign Up"
         android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="235dp"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        />
 
     <EditText
         android:id="@+id/editTextLoginUsername"
@@ -36,75 +33,56 @@
         android:background="@drawable/custom_input1"
         android:ems="10"
         android:fontFamily="@font/rajdhani_semibold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView2"
         android:hint="username"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        />
 
     <EditText
         android:id="@+id/editTextTextUserPass"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="22dp"
-        android:layout_marginBottom="242dp"
+        android:layout_below="@+id/editTextLoginUsername"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/custom_input1"
         android:ems="10"
         android:fontFamily="@font/rajdhani_semibold"
         android:hint="password"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoginUsername"
-        app:layout_constraintVertical_bias="0.25" />
+         />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="We're happy you're here!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         android:id="@+id/SignupBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="106dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editTextTextUserPass"
+        android:layout_marginTop="30dp"
         android:text="Sign Up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextUserPass" />
+        />
 
     <TextView
         android:id="@+id/toLoginLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/SignupBtn"
+        android:layout_marginTop="15dp"
         android:text=" Already have an account? Login here."
         android:textColor="#9B51E0"
-        app:layout_constraintBottom_toTopOf="@+id/SignupBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextUserPass"
-        app:layout_constraintVertical_bias="1.0" />
+         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -115,7 +115,6 @@ public class JobSearchFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_job_search, container, false);
         jobListView = (ListView) view.findViewById(R.id.jobListView);
 
-       /////////////////////////////////////// //DO A CATCH FOR IF INTERNET IS INACCESSIBLE //////////////////////////////////////////////////////////
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
@@ -127,7 +126,6 @@ public class JobSearchFragment extends Fragment {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                //on internet error, show dialog
                 alertUserError();
                 e.printStackTrace();
             }
@@ -182,7 +180,6 @@ public class JobSearchFragment extends Fragment {
 
                             }else{
                                 Location loc = locationManager.getLastKnownLocation("gps");
-                                userLocation = loc.getLongitude() + "," + loc.getLatitude();
                                 jobList = sortJobsByLocations(jobList, loc.getLatitude(), loc.getLongitude());
                                 for(int k = 0; k < jobList.size(); k++) {
                                     fillCompanyName.add(jobList.get(k).getCompanyTitle());
@@ -270,7 +267,6 @@ public class JobSearchFragment extends Fragment {
                 return distance1.compareTo(distance2);
             }
         };
-
 
         Collections.sort(list, comp);
         return list;
